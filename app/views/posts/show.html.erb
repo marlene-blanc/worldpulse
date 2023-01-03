@@ -1,0 +1,37 @@
+
+<div class= "show_container">
+  <ul class= "post_card">
+    <div class= "post_details">
+      <div class="image_post_logo">
+        <%= image_tag("newspaper-globe.jpg")%>
+      </div>
+      <div class= "title_show"><h3><strong>Article de presse:</strong></h3>
+        <li><%= @post.title %></li>
+      </div>
+      <div class= "title_show"><h3><strong>A propos:</strong></h3>
+        <li><%= @post.content%></li>
+      </div>
+      <div class= "Post_link"></h3>
+        <li><%=link_to "Cliquez ici pour en savoir plus", @post.url, class: "btn btn-outline-dark"%></li>
+      </div>
+      <div class="delete_button">
+        <%= link_to "Supprimer cet article", post_path(@post), data: { turbo_method: :delete, turbo_confirm: "Etes-vous sûr de vouloir supprimer cet article?" }, class: "btn btn-outline-dark"%>
+      </div>
+       <div class="add_comment_button">
+        <%= link_to "Commenter cet article", new_post_comment_path(@post), class: "btn btn-outline-dark"%>
+      </div>
+      <p><strong>Commentaires</strong></p>
+        <ul class="list-group">
+          <% @post.comments.each do |comment| %>
+            <li class="list-group-item"><%= comment.content %></li>
+            <%= link_to "Supprimer ce commentaire", comment_path(comment), data: { turbo_method: :delete, turbo_confirm: "Etes-vous sûr de vouloir supprimer ce commentaire?" }, class: "btn btn-outline-dark"%>
+
+          <% end %>
+        </ul>
+<br>
+    </div>
+  </ul>
+  <div class="back_button">
+    <%= link_to "Retour aux articles", posts_path, class: "btn btn-outline-dark"%>
+  </div>
+</div>

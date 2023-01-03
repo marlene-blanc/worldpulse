@@ -1,1 +1,30 @@
 // Specific CSS for your home-page
+.home_background{
+
+  background-size: cover;
+  padding-bottom: 465px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(233, 233, 207, 0.5),
+    rgba(12, 12, 12, 0.5)
+  ), url("oksana-z-DLHK4sgdgPA-unsplash");
+  }
+#home_h1{
+  font-weight: bolder;
+  font-size: 100px;
+  padding-top: 30px;
+}
+#home_h2{
+  font-weight: bolder;
+  margin-top: 80px;
+}
+.home_link a{
+  margin-top: 50px;
+  padding: 15px;
+  border-radius: 25px;
+  background-color: black;
+}
+.home_link a:hover{
+  color: black;
+  background-color: white;
+}

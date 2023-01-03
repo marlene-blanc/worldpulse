@@ -1,6 +1,14 @@
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  padding-right: 20px;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: gold;
+}
 .navbar-lewagon {
+
   justify-content: space-between;
-  background: white;
+  background-color: black;
 }
 
 .navbar-lewagon .navbar-collapse {

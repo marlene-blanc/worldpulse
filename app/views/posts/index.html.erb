@@ -1,0 +1,22 @@
+<div class= "index_container">
+  <h1>Articles de presse sur l'actualité internationale:</h1>
+  <div class="new_post_button">
+    <%= link_to "Ajoutez un article !", new_post_path(@post), class: "btn btn-outline-dark"%>
+  </div>
+  <ul>
+    <% @posts.each do |post| %>
+      <div class= "card_post">
+        <li>
+          <h4><strong><%= post.title %></strong></h4>
+        </li>
+        <li>
+          <h5><%= post.content %></h5>
+        </li>
+        <div class="Details_post">
+          <%= link_to "Details de l'article", post_path(post), class: "btn btn-outline-dark" %>
+        </div>
+      </div>
+    <% end %>
+  </ul>
+
+</div>

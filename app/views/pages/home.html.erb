@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home_background">
+  <div class="container" style="text-align: center;">
+
+    <h1 id="home_h1">World Pulse</h1>
+
+    <h2 id="home_h2">Soyez curieux et partagez les informations du monde entier</h2>
+
+    <div class="home_link">
+      <%= link_to "Entrez!", posts_path, type: "button", class: "btn btn-dark"%>
+    </div>
+  </div>
+    <%= render "shared/footer" %>
+</div>

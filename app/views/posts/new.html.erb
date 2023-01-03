@@ -1,0 +1,12 @@
+<div class="container">
+
+    <h2> Publiez votre article:</h2>
+
+    <%= simple_form_for [@user, @post] do |f| %>
+      <%= f.input :title %>
+      <%= f.input :content %>
+      <%= f.input :url %>
+      <%= f.submit "Ajouter cet article", class: "btn btn-outline-dark"%>
+    <% end %>
+  </div>
+<div>
