@@ -1,0 +1,14 @@
+.new_post_background{
+  height: 600px;
+  color: #ececdd;
+  background-size: cover;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(233, 233, 207, 0.3),
+    rgba(12, 12, 12, 0.9)
+  ), url("jon-tyson-articles fond_d_ec");
+}
+.new_post_filter{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 20px;
+}

@@ -1,12 +1,16 @@
-<div class="container">
+<div class="new_post_background">
+  <div class="new_post_filter">
+    <div class="container">
 
-    <h2> Publiez votre article:</h2>
+        <h2> Publiez votre article:</h2>
 
-    <%= simple_form_for [@user, @post] do |f| %>
-      <%= f.input :title %>
-      <%= f.input :content %>
-      <%= f.input :url %>
-      <%= f.submit "Ajouter cet article", class: "btn btn-outline-dark"%>
-    <% end %>
-  </div>
+        <%= simple_form_for [@user, @post] do |f| %>
+          <%= f.input :title %>
+          <%= f.input :content %>
+          <%= f.input :url %>
+          <%= f.submit "Ajouter cet article", class: "btn btn-outline-dark"%>
+        <% end %>
+      </div>
+    <div>
+  <div>
 <div>

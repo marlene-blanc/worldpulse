@@ -1,8 +1,0 @@
-<div class="container">
-  <h1>Nouveau commentaire:</h1>
-
-  <%= simple_form_for [@post, @comment] do |f| %>
-        <%= f.input :content %>
-        <%= f.submit "Ajouter ce commentaire", class: "btn btn-outline-dark" %>
-      <% end %>
-</div>

@@ -15,21 +15,19 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new(comment_params)
-    @comment.user = current_user
+    @new_comment = Comment.new(comment_params)
+    @new_comment.user = current_user
     @post = Post.find(params[:post_id])
-    @comment.post = @post
-    if @comment.save
-      redirect_to post_path(@post), notice: "Votre commentaire a été correctement créé."
-    else
-      render :new, status: :unprocessable_entity
-    end
+    @new_comment.post = @post
+    @new_comment.save
+    redirect_to post_path(@post), notice: "Votre commentaire a été correctement créé."
+
   end
 
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    redirect_to post_path(@comment.post), notice: "Votre commentaire a été correctement supprimé."
+    redirect_to posts_path, notice: "Votre commentaire a été correctement supprimé."
   end
 
   private

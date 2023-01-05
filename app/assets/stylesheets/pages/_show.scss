@@ -1,0 +1,87 @@
+.show_background{
+  top: 0;
+  background-repeat: no-repeat;
+  padding-bottom: 465px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(233, 233, 207, 0.5),
+    rgba(12, 12, 12, 0.5)
+  ), url("egor-vikhrev-articles");
+}
+.post_card img{
+
+  width: 45%;
+  padding: 30px;
+  border-radius: 8px;
+}
+.post_card{
+  padding-left: 0;
+  text-align: center;
+  list-style: none;
+  background-size: cover;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(233, 233, 207, 0.3),
+    rgba(12, 12, 12, 0.9)
+  ), url("ludovica-dri- articles");
+}
+.post_details{
+  padding-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 20px;
+  border-radius: 0 0 10px 10px;
+  color: #ececdd;
+  background-color: black;
+}
+.title_show{
+  padding: 5%;
+}
+
+.btn{
+  border: 2px solid #ececdd;
+}
+.btn:hover{
+  border: 2px solid black;
+  border-radius: 30px;
+  color: black;
+  background-color: #ececdd;
+}
+.links_card{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: space-around;
+  display: flex;
+}
+.comments_card{
+  margin-top: 210px;
+  padding-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-radius: 10px;
+  color: #ececdd;
+  background-color: rgba(0,0,0,0.7);
+}
+.comments_card h3{
+  padding-top: 20px;
+  text-align: center;
+}
+.black_filter_card h1{
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.black_filter_card{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.list-group-item{
+  background-color: #ececdd;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.Comments{
+  display: block;
+}

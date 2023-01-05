@@ -1,0 +1,72 @@
+.index_h1{
+  text-align: center;
+  font-weight: bolder;
+}
+.title{
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ececdd;
+  border-radius: 0 0 6px 6px;
+}
+#press_title{
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.card_post{
+    padding-bottom: 65px;
+    position: relative;
+    margin-right: 20px;
+    background-color: #ececdd;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 6px;
+    border: solid 2px black;
+}
+.wrapper{
+  display: flex;
+
+}
+.index_ul{
+  list-style: none;
+}
+.btn{
+  border-radius: 30px;
+  color:#ececdd;
+  background-color: black;
+}
+.btn:hover{
+  border: 2px solid black;
+  border-radius: 30px;
+  color: black;
+  background-color: #84f2c9;
+}
+.post_background{
+  background-repeat: no-repeat;
+  padding-bottom: 465px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(233, 233, 207, 0.5),
+    rgba(12, 12, 12, 0.5)
+  ), url("peter-lawrence-articles");
+}
+
+.image_post_logo{
+  text-align: center;
+  background-color: black;
+}
+.image_post_logo img{
+
+  width: 50%;
+}
+.new_post_button{
+  margin-top: 30px;
+  text-align: center;
+}
+.details_button{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.Details_post{
+  padding-bottom: 50px;
+}

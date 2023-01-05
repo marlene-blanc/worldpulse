@@ -1,37 +1,42 @@
 
-<div class= "show_container">
-  <ul class= "post_card">
+<div class="show_background">
+  <div class= "container">
     <div class= "post_details">
-      <div class="image_post_logo">
-        <%= image_tag("newspaper-globe.jpg")%>
-      </div>
-      <div class= "title_show"><h3><strong>Article de presse:</strong></h3>
-        <li><%= @post.title %></li>
-      </div>
-      <div class= "title_show"><h3><strong>A propos:</strong></h3>
-        <li><%= @post.content%></li>
-      </div>
-      <div class= "Post_link"></h3>
-        <li><%=link_to "Cliquez ici pour en savoir plus", @post.url, class: "btn btn-outline-dark"%></li>
-      </div>
-      <div class="delete_button">
-        <%= link_to "Supprimer cet article", post_path(@post), data: { turbo_method: :delete, turbo_confirm: "Etes-vous sûr de vouloir supprimer cet article?" }, class: "btn btn-outline-dark"%>
-      </div>
-       <div class="add_comment_button">
-        <%= link_to "Commenter cet article", new_post_comment_path(@post), class: "btn btn-outline-dark"%>
-      </div>
-      <p><strong>Commentaires</strong></p>
-        <ul class="list-group">
-          <% @post.comments.each do |comment| %>
-            <li class="list-group-item"><%= comment.content %></li>
-            <%= link_to "Supprimer ce commentaire", comment_path(comment), data: { turbo_method: :delete, turbo_confirm: "Etes-vous sûr de vouloir supprimer ce commentaire?" }, class: "btn btn-outline-dark"%>
-
-          <% end %>
-        </ul>
-<br>
+      <ul class= "post_card">
+        <div class="black_filter_card">
+          <h1><strong>World pulse</strong></h1>
+          <div class= "title_show">
+            <li><h3><strong><%= @post.title %></strong></h3></li>
+          </div>
+          <div class= "title_show"><h3><strong>A propos</strong></h3>
+            <li><%= @post.content%></li>
+          </div>
+          <div class= "Post_link"></h3>
+            <li><%=link_to "Cliquez ici pour en savoir plus", @post.url,  class: "btn btn-outline-dark"%></li>
+          </div>
+          <div class="links_card">
+            <div class="delete_button">
+            <%= button_to "Supprimer cet article", post_path(@post), method: :delete, data: { confirm: 'Souhaitez-vous vraiment supprimer cet article?' },  class: "btn btn-outline-dark"%>
+            </div> form: { data: { turbo_confirm: 'Are you sure?' } }
+            <div class="back_button">
+              <%= link_to "Retour aux articles", posts_path, class: "btn btn-outline-dark"%>
+            </div>
+        </div>
+      </ul>
     </div>
-  </ul>
-  <div class="back_button">
-    <%= link_to "Retour aux articles", posts_path, class: "btn btn-outline-dark"%>
-  </div>
+    <div class="Comments">
+      <div class="form_comments">
+          <%= render "posts/_new_comment/simple_form_for" %>
+      </div>
+      <div class="comments_card">
+          <h3><strong>Commentaires</strong></h3>
+          <ul class="list-group">
+            <% @post.comments.each do |comment| %>
+              <li class="list-group-item"><%= comment.content %></li>
+            <%= link_to "Supprimer ce commentaire", comment_path(comment), data: { turbo_method: :delete, turbo_confirm: "Etes-vous sûr de vouloir supprimer ce commentaire?" }, class: "btn btn-outline-dark"%>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
 </div>
