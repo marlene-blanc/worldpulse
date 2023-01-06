@@ -17,7 +17,7 @@
           <div class="links_card">
             <div class="delete_button">
             <%= button_to "Supprimer cet article", post_path(@post), method: :delete, data: { confirm: 'Souhaitez-vous vraiment supprimer cet article?' },  class: "btn btn-outline-dark"%>
-            </div> form: { data: { turbo_confirm: 'Are you sure?' } }
+            </div>
             <div class="back_button">
               <%= link_to "Retour aux articles", posts_path, class: "btn btn-outline-dark"%>
             </div>
@@ -39,4 +39,5 @@
         </div>
       </div>
     </div>
+    <%= render "shared/footer" %>
 </div>

@@ -1,5 +1,5 @@
 <div class="post_background">
-  <div class= "container">
+  <div class= "container_index">
     <div class="title">
       <h1 class="index_h1">Articles d'actualité internationale:</h1>
     </div>
@@ -13,22 +13,21 @@
             <div class="image_post_logo">
               <%= image_tag("SL-112119-25250-45.jpg")%>
             </div>
-
+            <li>
+              <h4 id="press_title"><strong><%= post.title %></strong></h4>
+            </li>
+            <div class="Details_post">
               <li>
-                <h4 id="press_title"><strong><%= post.title %></strong></h4>
+                <h5><%= post.content.truncate(100) %></h5>
               </li>
-              <div class="Details_post">
-                <li>
-                  <h5><%= post.content.truncate(100) %></h5>
-                </li>
-                <li class="details_button">
-                  <%= link_to "Details de l'article", post_path(post), class: "btn btn-outline-dark" %>
-                </li>
-              </div>
-
+              <li class="details_button">
+                <%= link_to "Details de l'article", post_path(post), class: "btn btn-outline-dark" %>
+              </li>
+            </div>
           </div>
         <% end %>
       </ul>
     </div>
   </div>
+  <%= render "shared/footer" %>
 </div>

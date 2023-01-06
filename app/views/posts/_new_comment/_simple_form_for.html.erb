@@ -3,7 +3,7 @@
   <div class="new_comment_filter">
       <h3 class="new_comment"><strong>Commenter cet article</strong></h3>
       <%= simple_form_for [@post, @new_comment] do |f| %>
-            <%= f.input :content %>
+            <%= f.input :content, as: :text%>
             <%= f.submit "Ajouter ce commentaire", class: "btn btn-outline-dark" %>
           <% end %>
     </div>
