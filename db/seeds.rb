@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require "open-uri"
 puts "Cleaning up database..."
 Post.destroy_all
 User.destroy_all
@@ -14,6 +15,7 @@ user1 = User.create!(email: "titi@gmail.com", nickname: "titi", password: "titit
 user2 = User.create!(email: "tata@gmail.com", nickname: "tata", password: "tatata")
 
 puts "Creating Posts"
+
 
 post1 = Post.create!(title: "Afghanistan : 'Le pays est entré dans la nuit depuis seize mois', se désole l'ambassadeur
                      de France en Afghanistan", content: "Après avoir interdit aux Afghanes d'étudier dans les

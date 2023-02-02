@@ -1,4 +1,5 @@
 
+<%= render "shared/navbar" %>
 <div class="show_background">
   <div class= "container">
     <div class= "post_details">
@@ -32,7 +33,8 @@
           <h3><strong>Commentaires</strong></h3>
           <ul class="list-group">
             <% @post.comments.each do |comment| %>
-              <li class="list-group-item"><%= comment.content %></li>
+              <li class="list-group-item"><em><%= current_user.nickname%></em><br/><%= comment.content%><br/><br/><em><%= comment.post.created_at.strftime('%d %m %Y') %></em></li>
+
             <%= link_to "Supprimer ce commentaire", comment_path(comment), data: { turbo_method: :delete, turbo_confirm: "Etes-vous sûr de vouloir supprimer ce commentaire?" }, class: "btn btn-outline-dark"%>
             <% end %>
           </ul>

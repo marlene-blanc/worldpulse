@@ -1,3 +1,4 @@
+<%= render "shared/navbar" %>
 <div class="post_background">
   <div class= "container_index">
     <div class="title">
@@ -7,25 +8,29 @@
       <%= link_to "Ajoutez un article !", new_post_path(@post), class: "btn btn-outline-dark"%>
     </div>
     <div class="wrapper">
-      <ul class="index_ul" style="display: grid; grid-template-columns: 1fr 1fr 1fr">
-        <% @posts.each do |post| %>
-          <div class= "card_post">
-            <div class="image_post_logo">
-              <%= image_tag("SL-112119-25250-45.jpg")%>
+      <ul class="index_ul">
+        <div class="row">
+          <% @posts.each do |post| %>
+            <div class="col-12 col-lg-4">
+              <div class= "card_post">
+                <div class="image_post_logo">
+                  <%= image_tag("SL-112119-25250-45.jpg")%>
+                </div>
+                <li>
+                  <h4 id="press_title"><strong><%= post.title %></strong></h4>
+                </li>
+                <div class="Details_post">
+                  <li>
+                    <h5><%= post.content.truncate(100) %></h5>
+                  </li>
+                  <li class="details_button">
+                    <%= link_to "Details de l'article", post_path(post), class: "btn btn-outline-dark" %>
+                  </li>
+                </div>
+              </div>
             </div>
-            <li>
-              <h4 id="press_title"><strong><%= post.title %></strong></h4>
-            </li>
-            <div class="Details_post">
-              <li>
-                <h5><%= post.content.truncate(100) %></h5>
-              </li>
-              <li class="details_button">
-                <%= link_to "Details de l'article", post_path(post), class: "btn btn-outline-dark" %>
-              </li>
-            </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </ul>
     </div>
   </div>
