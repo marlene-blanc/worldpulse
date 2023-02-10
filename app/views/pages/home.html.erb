@@ -1,12 +1,18 @@
-<div class="home_background">
-  <div class="container" style="text-align: center;">
-    <h1 id="home_h1">World Pulse</h1>
-
-    <h2 id="home_h2">Soyez curieux et partagez les informations du monde entier</h2>
-
-    <div class="home_link">
-      <%= link_to "Entrez!", posts_path, type: "button", class: "btn btn-dark"%>
+<div class="home_container" style="text-align: center;">
+  <header class="title">
+        <h1 class="title__primary">
+            <strong>Worldpulse</strong>
+        </h1>
+        <hr />
+        <h2 class="title__secondary">
+            <strong>Soyez curieux et partagez les informations du monde entier</strong>
+        </h2>
+   <div class="controller" for="direction">
+      <%= link_to "Entrez!", posts_path, type: "button"%>
     </div>
-  </div>
-  <%= render "shared/footer" %>
+  </header>
 </div>
+  <%= render "shared/footer" %>
+
+      <%# <label class="controller" for="direction">Show/Hide</label>
+      <input type="checkbox" id="direction" name="direction" /> %>

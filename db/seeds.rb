@@ -11,8 +11,8 @@ Post.destroy_all
 User.destroy_all
 puts "Database cleaned"
 
-user1 = User.create!(email: "titi@gmail.com", nickname: "titi", password: "tititi")
-user2 = User.create!(email: "tata@gmail.com", nickname: "tata", password: "tatata")
+user1 = User.create!(email: "titi@gmail.com", nickname: "Jimmy_404", password: "tititi")
+user2 = User.create!(email: "tata@gmail.com", nickname: "Spock", password: "tatata")
 
 puts "Creating Posts"
 

@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :post_auth, only:[:destroy]
+
   def index
     @posts = Post.all
 
@@ -32,7 +34,16 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content, :url)
+    params.require(:post).permit(:title, :content, :url, :user_id)
+  end
+  def post_auth
+    @post = Post.find(params[:id])
+    @post_current_user = current_user.posts.find_by(id: params[:id])
+    @post = current_user.posts.find_by(id: params[:id])
+    if @post != @post_current_user
+      flash[:notice] = 'Cette publication ne vous appartient pas! Vous ne pouvez la supprimer.'
+    redirect_to posts_path
+    end
   end
 
 end

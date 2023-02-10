@@ -1,8 +1,8 @@
 <%= render "shared/navbar" %>
 <div class="post_background">
   <div class= "container_index">
-    <div class="title">
-      <h1 class="index_h1">Articles d'actualité internationale:</h1>
+    <div class="index-title">
+      <h1 class="index_h1">Actualité internationale</h1>
     </div>
     <div class="new_post_button">
       <%= link_to "Ajoutez un article !", new_post_path(@post), class: "btn btn-outline-dark"%>
@@ -14,7 +14,7 @@
             <div class="col-12 col-lg-4">
               <div class= "card_post">
                 <div class="image_post_logo">
-                  <%= image_tag("SL-112119-25250-45.jpg")%>
+                  <%= image_tag('SL-112119-25250-45.jpg', class: "image-jpg")%>
                 </div>
                 <li>
                   <h4 id="press_title"><strong><%= post.title %></strong></h4>

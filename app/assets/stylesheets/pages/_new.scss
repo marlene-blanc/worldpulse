@@ -9,11 +9,17 @@
   ), url("jon-tyson-articles fond_d_ec");
 }
 .new_filter{
+
   height: 500px;
   background-color: rgba(0, 0, 0, 0.5);
-  padding-bottom: 20px;
+  padding: 5vh;
+  border-radius: 10px;
 }
 .form-inputs{
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.titre_form{
+  text-align: center;
+  font-family: 'Special Elite', cursive;
 }

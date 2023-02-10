@@ -5,24 +5,25 @@
     <div class= "post_details">
       <ul class= "post_card">
         <div class="black_filter_card">
-          <h1><strong>World pulse</strong></h1>
+          <h1 id="show_head"><strong>Worldpulse</strong></h1>
           <div class= "title_show">
             <li><h3><strong><%= @post.title %></strong></h3></li>
           </div>
           <div class= "title_show"><h3><strong>A propos</strong></h3>
             <li><%= @post.content%></li>
           </div>
+
           <div class= "Post_link"></h3>
             <li><%=link_to "Cliquez ici pour en savoir plus", @post.url,  class: "btn btn-outline-dark"%></li>
           </div>
           <div class="links_card">
-            <div class="delete_button">
-            <%= button_to "Supprimer cet article", post_path(@post), method: :delete, data: { confirm: 'Souhaitez-vous vraiment supprimer cet article?' },  class: "btn btn-outline-dark"%>
-            </div>
             <div class="back_button">
               <%= link_to "Retour aux articles", posts_path, class: "btn btn-outline-dark"%>
-            </div>
-        </div>
+          </div>
+          </div>
+          <div class="delete_button">
+          <%= button_to "Supprimer cet article", post_path(@post), method: :delete, data: { confirm: 'Souhaitez-vous vraiment supprimer cet article?' },  class: "btn btn-danger"%>
+          </div>
       </ul>
     </div>
     <div class="Comments">
@@ -33,9 +34,9 @@
           <h3><strong>Commentaires</strong></h3>
           <ul class="list-group">
             <% @post.comments.each do |comment| %>
-              <li class="list-group-item"><em><%= current_user.nickname%></em><br/><%= comment.content%><br/><br/><em><%= comment.post.created_at.strftime('%d %m %Y') %></em></li>
+              <li class="list-group-item"><em><%= current_user.nickname%></em><br/><br/><%= comment.content%><br/><br/><em><%= comment.post.created_at.strftime('%d %m %Y') %></em></li>
 
-            <%= link_to "Supprimer ce commentaire", comment_path(comment), data: { turbo_method: :delete, turbo_confirm: "Etes-vous sûr de vouloir supprimer ce commentaire?" }, class: "btn btn-outline-dark"%>
+            <%= link_to "Supprimer ce commentaire", comment_path(comment), data: { turbo_method: :delete, turbo_confirm: "Etes-vous sûr de vouloir supprimer ce commentaire?" }, class: "btn btn-danger"%>
             <% end %>
           </ul>
         </div>

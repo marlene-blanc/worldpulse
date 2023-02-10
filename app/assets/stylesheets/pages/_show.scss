@@ -49,6 +49,12 @@
   color: black;
   background-color: #ececdd;
 }
+.btn-danger:hover{
+  border: 2px solid #ececdd;
+  border-radius: 30px;
+  color: #ececdd;
+  background-color: #e40f0f;
+}
 .links_card{
   margin-top: 30px;
   margin-bottom: 30px;
@@ -84,4 +90,13 @@
 }
 .Comments{
   display: block;
+}
+#show_head{
+  display: flex;
+  justify-content: center;
+  font-family: 'Special Elite', cursive;
+  color:  #ececdd;
+  text-shadow:4px 4px 1px black , 1px 0 0 rgba(136,136,136,0.7);
+  font-weight: normal;
+  font-size: 3rem;
 }
