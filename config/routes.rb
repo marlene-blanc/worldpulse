@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
   resources :comments, only: [:show, :destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+  get "/demo_page", to: "pages#demo_page"
   # Defines the root path route ("/")
 
 end

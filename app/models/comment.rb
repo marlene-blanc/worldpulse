@@ -4,4 +4,5 @@ class Comment < ApplicationRecord
 
   validates :content, presence: true
 
+  delegate :nickname, to: :user, prefix: true #-> @order.user_name
 end

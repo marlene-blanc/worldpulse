@@ -13,12 +13,14 @@ class CommentsController < ApplicationController
   def new
 
     @comment = Comment.new
+    @comment.created_at = Time.now
     @post = Post.find(params[:post_id])
   end
 
   def create
+
     @new_comment = Comment.new(comment_params)
-    @new_comment.user = current_user
+    @new_comment.user_id = current_user.id
     @post = Post.find(params[:post_id])
     @new_comment.post = @post
     @new_comment.save
